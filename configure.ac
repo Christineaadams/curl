@@ -649,6 +649,8 @@ AC_HELP_STRING([--disable-mqtt],[Disable MQTT support]),
        ;;
   *)   AC_MSG_RESULT(yes)
        experimental="$experimental MQTT"
+       AC_DEFINE(CURL_ENABLE_MQTT, 1, [to enable MQTT])
+       AC_SUBST(CURL_ENABLE_MQTT, [1])
        ;;
   esac ],
        AC_MSG_RESULT(no)
